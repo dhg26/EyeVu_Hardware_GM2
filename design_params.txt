@@ -1,1 +1,11 @@
+Design is split into 2 halves - lens tube + handle assembly 
 
+Lens tube design: 
+- Lens are 50mm in diameter 
+- Need adjustment and holding mechanism for lens 
+- No real idea how long the tube needs to be for the lens to work
+
+Handle assembly: 
+- Needs to house raspi, battery, bms
+- May need to house stepper motor/screen depending on future design approach 
+- Magnetic charging
