@@ -2,4 +2,5 @@
 Design docs/designs for GM2 project - EyeVu Hardware
 
 # Parts
-- Switch (water-resistant): https://uk.rs-online.com/web/p/push-button-switches/7346704
+- Raspberry Pi 4 - model B
+- PiCam v3 
