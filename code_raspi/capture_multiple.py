@@ -3,6 +3,7 @@ from time import sleep
 from picamera import PiCamera
 from os import listdir
 from datetime import datetime
+from camera_setting_functions import *
 
 
 help_message = """Script to capture multiple images with the PiCamera (no motorised control)
@@ -12,6 +13,9 @@ help_message = """Script to capture multiple images with the PiCamera (no motori
          - exit: exit the program
          - help: display this message
          - list: list the images that have already been captured
+         - resolution: set a resolution value from 1-6 (6 highest resolution)
+         - exposure: set an exposure mode for camera
+         - effect: set an image effect for camera
          - """
         
 
@@ -23,7 +27,10 @@ img_total = 0
 
 # Setup the camera
 camera = PiCamera()
-camera.resolution = (1024, 768)
+camera.resolution = (2592, 1944)
+sleep(5)
+#sudo raspi-config
+
 # WEZ - add a sleep to allow the camera to warm up, + exposure, focus and other settings to be set
 
 
@@ -44,7 +51,6 @@ def main_loop(img_total):
         camera.stop_preview()
         img_total += 1
 
-
     elif user_input == "preview":
         camera.start_preview()
         sleep(5) 
@@ -63,6 +69,20 @@ def main_loop(img_total):
     elif user_input == "exit":
         exit == True
     
+    elif user_input == "resolution":
+        res_input = input("Enter resolution from 1-6: ")
+        set_res(res_input)
+        sleep(2)
+    
+    elif user_input == "exposure":
+        exp_input = input("Enter exposure mode: ")
+        set_exp(exp_input)
+        sleep(2)
+    
+    elif user_input == "effect":
+        effect_input = input("Enter efect setting: ")
+        set_effect(effect_input)
+
     else: 
         print("Invalid command, please try again")
         print(help_message)
