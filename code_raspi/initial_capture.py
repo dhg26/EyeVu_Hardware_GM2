@@ -1,8 +1,13 @@
 from time import sleep 
 from picamera import PiCamera
 
-camera = PiCamera()
-camera.resolution = (1024, 768)
-camera.start_preview()
-sleep(2)
-camera.capture('image.jpg')
+def capture(counter):
+    camera = PiCamera()
+    camera.resolution = (1024, 768)
+    camera.start_preview()
+    sleep(2)
+    camera.capture('image' + str(counter)+ '.jpg')
+    print("image saved")
+
+capture(0)
+
