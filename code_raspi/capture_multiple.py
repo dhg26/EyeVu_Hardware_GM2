@@ -8,6 +8,9 @@ from motor_driver import *
 
 import RPi.GPIO as GPIO
 from camera_setting_functions import *
+from adafruit_motorkit import MotorKit
+
+kit =  MotorKit()
 
 #We will need to say that to know which mode we are in can just light up LEDs for each mode and that we should save the images to a usb drive
 
@@ -123,11 +126,21 @@ def main_loop(img_total):
         effect_input = input("Enter efect setting: ")
         set_effect(effect_input)
     
-    elif user_input == "clockwise":
-        rotate_clockwise()
-    elif user_input == "counterclockwise":
-        rotate_counterclockwise()
-    
+    elif user_input == "clockwise1":
+        #rotate_clockwise()
+        kit.stepper1.onestep(direction=MotorKit.FORWARD)
+
+    elif user_input == "counterclockwise1":
+        #rotate_counterclockwise()
+        kit.stepper1.onestep(direction=MotorKit.BACKWARD)
+        
+    elif user_input == "clockwise2":
+        #rotate_clockwise()
+        kit.stepper2.onestep(direction=MotorKit.FORWARD, style=MotorKit.DOUBLE)
+
+    elif user_input == "counterclockwise2":
+        #rotate_counterclockwise()
+        kit.stepper2.onestep(direction=MotorKit.BACKWARD, style=MotorKit.DOUBLE)
     else: 
         print("Invalid command, please try again")
         print(help_message)
