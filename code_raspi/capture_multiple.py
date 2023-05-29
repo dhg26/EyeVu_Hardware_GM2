@@ -4,6 +4,46 @@ from picamera import PiCamera
 from os import listdir
 from datetime import datetime
 from camera_setting_functions import *
+from motor_driver import *
+
+import RPi.GPIO as GPIO
+from camera_setting_functions import *
+
+#We will need to say that to know which mode we are in can just light up LEDs for each mode and that we should save the images to a usb drive
+
+# Set the GPIO mode to BCM
+GPIO.setmode(GPIO.BCM)
+
+# Define the GPIO pins for the buttons
+button1_pin = 1
+button2_pin = 2
+button3_pin = 3
+button4_pin = 4
+button5_pin = 5
+button6_pin = 6
+button7_pin = 13
+button8_pin = 19
+
+# Set the GPIO pins as inputs with pull-up resistors
+GPIO.setup(button1_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button2_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button3_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button4_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button5_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button6_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button7_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button8_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+step_delay = 0.001
+
+resolution_array = [1,2,3,4,5,6]
+exposure_array = ['auto','night'] #put more in
+effect_array =['none', 'denoise'] # put more in
+
+resolution_counter = 0
+exposure_counter = 0
+effect_counter = 0
+image_counter = 0
 
 
 help_message = """Script to capture multiple images with the PiCamera (no motorised control)
@@ -82,7 +122,12 @@ def main_loop(img_total):
     elif user_input == "effect":
         effect_input = input("Enter efect setting: ")
         set_effect(effect_input)
-
+    
+    elif user_input == "clockwise":
+        rotate_clockwise()
+    elif user_input == "counterclockwise":
+        rotate_counterclockwise()
+    
     else: 
         print("Invalid command, please try again")
         print(help_message)
