@@ -14,7 +14,7 @@
 # SETUP 
 from time import sleep 
 from picamera2 import Picamera2, Preview
-from os import listdir
+import os
 from datetime import datetime
 
 # Counter to record user behaviour and systems state
@@ -50,8 +50,6 @@ help_message = """This is a script to capture multiple images with the PiCamera 
 
 print(help_message_input)
 print(help_message)
-# Flag to tell program to quit
-exit = False
 # Counts the total number of images taken to give each image a unique name
 img_total = 0
 user_config = {}
@@ -91,7 +89,7 @@ def main_loop(img_total):
     user_input = input("Enter a command: ")
     
     if user_input == "capture":
-        img_name = str(input("Name your image: (or press Enter for default naming)"))
+        img_name = str(input("Name your image: (or press Enter for default naming)")) + ".jpg"
         if img_name == "":
             img_name = "image_" + str(img_total) + "_" + current_time + ".jpg"
             
@@ -100,10 +98,10 @@ def main_loop(img_total):
         img_total += 1
         print("img_total:", img_total)
 
-    # elif user_input == "preview":
-        # cam.start_preview()
-        # sleep(5) 
-        # cam.stop_preview()
+    elif user_input == "preview":
+        cam.start_preview()
+        sleep(5) 
+        cam.stop_preview()
 
     elif user_input == "help":
         print(help_message)
@@ -116,12 +114,12 @@ def main_loop(img_total):
                 print(i)
 
     elif user_input == "exit":
-        exit == True
+        exit()
         
     return img_total
 
-while exit == False:    
-    main_loop(img_total)
+while True:
+    img_total = main_loop(img_total)
 
 
 
