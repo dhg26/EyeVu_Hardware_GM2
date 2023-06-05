@@ -1,0 +1,9 @@
+This .txt file serves as a reference to identify the contributors responsible for each respective piece of work.
+
+CAD files: 
+- aluminium_rod [Dipanshu]
+- camera_mount [Dipanshu] 
+- lens_holder (all) [Dipanshu] 
+- rack and pinion [Dipanshu] 
+- slider [Dipanshu] 
+- total_assembly [Dipanshu]
