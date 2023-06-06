@@ -1,4 +1,4 @@
-This .txt file serves as a reference to identify the contributors responsible for each respective piece of work.
+This .txt file serves as a reference to identify the contributors responsible for each respective piece of work. [x (and y)] represents a slightly disproportionate work distribution.
 
 CAD files: 
 - aluminium_rod [Dipanshu]
@@ -7,3 +7,11 @@ CAD files:
 - rack and pinion [Dipanshu] 
 - slider [Dipanshu] 
 - total_assembly [Dipanshu]
+
+Code:
+- pseudocodes for autofocus [Wes]
+- Other python codes [Wes (and Dipanshu)]
+
+Optics:
+- Photos [Wes + Kitty]
+- Optics design notes [Kitty (and Wes)]
