@@ -13,6 +13,6 @@ Documents:
 - Proof of lens calculation with camera and ruler [Kitty (and Wes)]
 - Development of Lens Design [Kitty + Wes]
 - Theoretical illumination design and safety calculations [Kitty]
-- Block diagram of full system [Wes (and Kitty)]
+- Block diagram of full system [Wes]
 
 
