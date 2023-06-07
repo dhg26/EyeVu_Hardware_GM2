@@ -8,10 +8,8 @@ CAD files:
 - slider [Dipanshu] 
 - total_assembly [Dipanshu]
 
-Code:
-- pseudocodes for autofocus [Wes]
-- Other python codes [Wes (and Dipanshu)]
-
 Optics:
 - Photos [Wes + Kitty]
-- Optics design notes [Kitty (and Wes)]
+- Proof of lens calculation with camera and ruler [Kitty (and Wes)]
+- Development of Lens Design [Kitty + Wes]
+- Theoretical illumination design and safety calculations [Kitty]
