@@ -8,8 +8,11 @@ CAD files:
 - slider [Dipanshu] 
 - total_assembly [Dipanshu]
 
-Optics:
+Documents:
 - Photos [Wes + Kitty]
 - Proof of lens calculation with camera and ruler [Kitty (and Wes)]
 - Development of Lens Design [Kitty + Wes]
 - Theoretical illumination design and safety calculations [Kitty]
+- Block diagram of full system [Wes (and Kitty)]
+
+
