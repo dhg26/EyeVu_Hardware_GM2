@@ -13,3 +13,7 @@ CAD models:
 Electronics: 
 - Wiring Diagram [Dipanshu] 
 - Overview document [Dipanshu]
+
+Mechanical: 
+- Mechanical calculations [Dipanshu]
+- Manufacturing and Assembly instructions [Dipanshu]

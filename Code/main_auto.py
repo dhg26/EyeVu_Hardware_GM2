@@ -48,15 +48,20 @@ help_message = """This is a script to capture multiple images with the PiCamera 
          - stateconfig : states the camera's current configuration. This can only be configured at the start. 
          """
 
+# Print the help message
 print(help_message_input)
 print(help_message)
+
 # Counts the total number of images taken to give each image a unique name
 img_total = 0
 user_config = {}
+
+# Get the current time
 now = datetime.now() 
 current_time = now.strftime("%H:%M:%S")
 
 
+# Get the user's input for the camera's configuration
 res_width = input("res_width")
 res_height = input("res_height")
 Brightness = input("brightness") 
@@ -69,10 +74,11 @@ Sharpness = input("sharpness")
 cam = Picamera2()
 still_config = cam.create_still_configuration()
 
+# Set the camera's configuration
 if res_width != "" and res_height != "":
 	resolution = tuple([int(res_width), int(res_height)])
 	still_config["size"] = resolution
-	
+
 if Brightness != "": 
 	still_config["controls"]["Brightness"] = float(Brightness)
 	
@@ -81,21 +87,29 @@ if ExposureTime != "":
 	
 if Sharpness != "":
 	still_config["controls"]["Sharpness"] = Sharpness 
-	
+
+# Configure the camera
 cam.configure(still_config)
 
 
 def main_loop(img_total):
+    # Main loop
     user_input = input("Enter a command: ")
     
     if user_input == "capture":
+        # Get the image name from the user
         img_name = str(input("Name your image: (or press Enter for default naming)")) + ".jpg"
         if img_name == "":
+            # Default naming convention
             img_name = "image_" + str(img_total) + "_" + current_time + ".jpg"
             
         # Default setting for the rest of the capture parameters should be sufficent    
         cam.start_and_capture_file(img_name, delay=3)
+
+        # Increment the image counter
         img_total += 1
+
+        # Print the total number of images taken
         print("img_total:", img_total)
 
     elif user_input == "preview":
@@ -109,6 +123,7 @@ def main_loop(img_total):
     elif user_input == "list":
         print("List of images")
         print("--------------")
+        # List all the images in the current directory
         for i in os.listdir():
             if i.endswith(".jpg"):
                 print(i)
