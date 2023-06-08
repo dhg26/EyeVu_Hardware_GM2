@@ -16,4 +16,4 @@ Electronics:
 
 Mechanical: 
 - Mechanical calculations [Dipanshu]
-- Manufacturing and Assembly instructions [Dipanshu]
+- Manufacturing and Assembly instructions(Mechanism)[Dipanshu]
