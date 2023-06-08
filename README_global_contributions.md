@@ -5,7 +5,7 @@ Code
 
 Code: 
 - Pseudocode for Autofocus [Wes]
-- autofocus_onebutton [Wes]
+- autofocus_onebutton [Wes (and Kitty)]
 - main_auto [Dipanshu]
 - test_cam [Dipanshu + Wes]
 
@@ -13,7 +13,7 @@ Code:
 
 
 
-Archive (ignore the name saying delete, can't change the folder name after creation)
+Archive
 
 Archive code:
 - motor code [Alex]
