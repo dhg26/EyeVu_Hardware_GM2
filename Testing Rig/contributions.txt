@@ -1,0 +1,18 @@
+This .txt file serves as a reference to identify the contributors responsible for each respective piece of work. [x (and y)] represents a slightly disproportionate work distribution.
+
+CAD files: 
+- aluminium_rod [Dipanshu]
+- camera_mount [Dipanshu] 
+- lens_holder (all) [Dipanshu] 
+- rack and pinion [Dipanshu] 
+- slider [Dipanshu] 
+- total_assembly [Dipanshu]
+
+Documents:
+- Photos [Wes + Kitty]
+- Proof of lens calculation with camera and ruler [Kitty (and Wes)]
+- Development of Lens Design [Kitty + Wes]
+- Theoretical illumination design and safety calculations [Kitty]
+- Block diagram of full system [Wes]
+
+

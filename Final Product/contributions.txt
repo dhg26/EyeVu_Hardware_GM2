@@ -1,0 +1,19 @@
+This .txt file serves as a reference to identify the contributors responsible for each respective piece of work.
+
+CAD models: 
+- lens_model [Dipanshu]
+- aluminium_tube [Dipanshu]
+- camera_holder [Dipanshu]
+- disk_w_scotch [Dipanshu]
+- lens_holder [Dipanshu]
+- MG995 servo + horn [found online]
+- total assembly [Dipanshu]
+- tube_holder_half [Dipanshu]
+
+Electronics: 
+- Wiring Diagram [Dipanshu] 
+- Overview document [Dipanshu]
+
+Mechanical: 
+- Mechanical calculations [Dipanshu]
+- Manufacturing and Assembly instructions [Dipanshu]
